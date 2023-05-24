@@ -1,0 +1,23 @@
+@import './quasar.variables.scss';
+@import '~quasar-styl';
+// @import '~quasar-addon-styl';
+.q-item{
+    min-height: 25px;
+}
+.ellipsis{
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    text-align: left;
+}
+.q-item__label{
+    text-align: left;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 0;
+}
+.q-toolbar__title{
+    cursor: pointer;
+}
