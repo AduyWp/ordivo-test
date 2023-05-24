@@ -139,7 +139,7 @@
                         <q-item-section class="items-start">
                             <div class="row">
                                 <span class="text-subtitle q-mr-md text-weight-bold">Created</span>
-                                <span class="ellipsis">{{ detailStarships.created }}</span>
+                                <span class="ellipsis">{{ moment(detailStarships.created).format("ddd MMM DD, YYYY [at] HH:mm a") }}</span>
                             </div>
                         </q-item-section>
                     </q-item>
@@ -147,7 +147,7 @@
                         <q-item-section class="items-start">
                             <div class="row">
                                 <span class="text-subtitle q-mr-md text-weight-bold">Edited</span>
-                                <span class="ellipsis">{{ detailStarships.edited }}</span>
+                                <span class="ellipsis">{{ moment(detailStarships.edited).format("ddd MMM DD, YYYY [at] HH:mm a") }}</span>
                             </div>
                         </q-item-section>
                     </q-item>
@@ -171,6 +171,7 @@
     import { useStarships } from '@/repositories/starships'
     import { useQuasar } from 'quasar'
     import { useRoute } from 'vue-router'
+    import moment from 'moment'
 
     const $q = useQuasar()
     const route = useRoute()
